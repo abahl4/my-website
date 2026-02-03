@@ -9,7 +9,7 @@
   --shadow: rgba(18, 21, 31, 0.12);
   --line: rgba(27, 27, 31, 0.08);
   --radius: 18px;
-  --max: 980px;
+  --max: 1160px;
   --space: clamp(16px, 2vw, 24px);
   --display: "Fraunces", "Garamond", "Times New Roman", serif;
   --body: "IBM Plex Sans", "Trebuchet MS", "Helvetica", sans-serif;
@@ -73,8 +73,8 @@ body {
   margin: 0 auto;
   padding: clamp(32px, 6vw, 80px) var(--space) 32px;
   display: grid;
-  grid-template-columns: minmax(360px, 2fr) minmax(200px, 1fr);
-  gap: clamp(24px, 4vw, 60px);
+  grid-template-columns: minmax(440px, 2.3fr) minmax(220px, 0.9fr);
+  gap: clamp(28px, 5vw, 96px);
   align-items: center;
 }
 
@@ -120,6 +120,9 @@ body {
   flex-direction: column;
   gap: 10px;
   font-weight: 600;
+  align-items: flex-end;
+  text-align: right;
+  justify-self: end;
 }
 
 .hero__nav a {
@@ -301,6 +304,9 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 12px;
+    align-items: flex-start;
+    text-align: left;
+    justify-self: start;
   }
 
   .hero__actions {
