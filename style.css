@@ -73,7 +73,7 @@ body {
   margin: 0 auto;
   padding: clamp(32px, 6vw, 80px) var(--space) 32px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: minmax(360px, 2fr) minmax(200px, 1fr);
   gap: clamp(24px, 4vw, 60px);
   align-items: center;
 }
@@ -101,13 +101,18 @@ body {
 
 .hero__blurb {
   margin: 0 0 20px;
-  max-width: 48ch;
+  max-width: 62ch;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: flex-end;
+}
+
+.hero--compact {
+  padding-bottom: 24px;
 }
 
 .hero__nav {
@@ -212,6 +217,34 @@ body {
   margin-bottom: 0;
 }
 
+.photo-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.photo-card {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.photo-placeholder {
+  background: linear-gradient(135deg, rgba(10, 108, 241, 0.15), rgba(255, 168, 76, 0.2));
+  border-radius: 16px;
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-weight: 600;
+  border: 1px dashed rgba(27, 27, 31, 0.2);
+}
+
+.photo-card figcaption {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .pill-row {
   display: flex;
   flex-wrap: wrap;
@@ -261,12 +294,17 @@ body {
 @media (max-width: 720px) {
   .hero {
     padding-top: 40px;
+    grid-template-columns: 1fr;
   }
 
   .hero__nav {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 12px;
+  }
+
+  .hero__actions {
+    justify-content: flex-start;
   }
 }
 
